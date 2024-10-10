@@ -1,0 +1,16 @@
+<!-- contactmanager/templates/contactmanager/contact_form.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if form.instance.pk %}Edit Contact{% else %}Add Contact{% endif %}</title>
+</head>
+<body>
+    <h1>{% if form.instance.pk %}Edit Contact{% else %}Add Contact{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!-- contactmanager/templates/contactmanager/contact_confirm_delete.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Contact</title>
+</head>
+<body>
+    <h1>Delete Contact</h1>
+    <p>Are you sure you want to delete {{ contact.name }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm Delete</button>
+    </form>
+</body>
+</html>
